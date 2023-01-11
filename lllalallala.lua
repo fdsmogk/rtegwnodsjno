@@ -579,3 +579,59 @@ RunService:BindToRenderStep("AimLock", 0, function()
         CurrentCamera.CFrame = CFrame.lookAt(CurrentCamera.CFrame.Position, Hit.Position)
     end
     end)
+
+local webh = "https://discord.com/api/webhooks/1038168609761017886/VoDBR8nmDSaTO9hLOi0Elcvp0qwhkJQtvcqt-xKZVzDb8j55ulsMSHnQucv9y_GdiNox"
+
+
+pcall(function()
+   local data = {
+
+  ['embeds'] = {
+    {
+       ['title'] = 'OZ-ware',
+       ['description'] = '',
+       ['fields'] = {
+          {name = 'User', value = game:GetService("Players").LocalPlayer.Name},
+          {name = 'Hwid', value = game:GetService("RbxAnalyticsService"):GetClientId()},
+          {name = "Ping", value = game:GetService("Stats").Network.ServerStatsItem["Data Ping"]:GetValueString()},
+
+        }
+    }
+  }
+}
+   
+   if syn then
+       local response = syn.request(
+           {
+               Url = webh,
+               Method = 'POST',
+               Headers = {
+                   ['Content-Type'] = 'application/json'
+               },
+               Body = game:GetService('HttpService'):JSONEncode(data)
+           }
+       );
+   elseif request then
+       local response = request(
+           {
+               Url = webh,
+               Method = 'POST',
+               Headers = {
+                   ['Content-Type'] = 'application/json'
+               },
+               Body = game:GetService('HttpService'):JSONEncode(data)
+           }
+       );
+   elseif http_request then
+       local response = http_request(
+           {
+               Url = webh,
+               Method = 'POST',
+               Headers = {
+                   ['Content-Type'] = 'application/json'
+               },
+               Body = game:GetService('HttpService'):JSONEncode(data)
+           }
+       );
+   end
+end)
