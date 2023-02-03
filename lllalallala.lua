@@ -14,9 +14,9 @@ getgenv().SkyAmount = 100000000000000000000000000
 
 game:GetService("RunService").heartbeat:Connect(function()
     if getgenv().Sky ~= false then 
-    local vel = game.Workspace.Players.kreepozi.HumanoidRootPart.Velocity
-    game.Workspace.Players.kreepozi.HumanoidRootPart.Velocity = Vector3.new(0,      getgenv().SkyAmount,0) 
+    local vel = game.Workspace.Players.KreepOZi.HumanoidRootPart.Velocity
+    game.Workspace.Players.KreepOZi.HumanoidRootPart.Velocity = Vector3.new(0,      getgenv().SkyAmount,0) 
     game:GetService("RunService").RenderStepped:Wait()
-    game.Workspace.Players.kreepozi.HumanoidRootPart.Velocity = vel
+    game.Workspace.Players.KreepOZi.HumanoidRootPart.Velocity = vel
     end 
 end)
