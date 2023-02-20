@@ -8,9 +8,3 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/fdsmogk/wgrijndsapmoi
 loadstring(game:HttpGet("https://raw.githubusercontent.com/fdsmogk/hrehetrhjsftjhfj/main/hdjtsrfjtsfjxgsxfjskxfjskfjkfjfjg", true))()
 
 --Fun
-getgenv().Host = 'KreepOZi'
-getgenv().FPS = 360
-getgenv().Alts = {
- Alt1 = game.Players.LocalPlayer.UserId
-}
-loadstring(game:HttpGet('https://raw.githubusercontent.com/W9K/roblox-scripts/main/DHC/AltControlV1', true))()
